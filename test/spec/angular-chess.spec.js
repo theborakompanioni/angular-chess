@@ -13,7 +13,7 @@ describe('angular-chess', function () {
   }));
   
   it('should initialize the game correctly', function() {
-    var element = $compile('<chessgame game="game" board="board"></div>')($scope);
+    var element = $compile('<nywton-chessgame game="game" board="board"></nywton-chessgame>')($scope);
     
     $scope.$digest();
 
