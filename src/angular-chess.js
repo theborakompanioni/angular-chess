@@ -132,36 +132,60 @@
     return directive;
   }])
   
-  .directive('nywtonRandomVsRandom', ['$timeout','$log', 'NywtonChessGameService', function($timeout, $log, ChessGameService) {
+  .directive('nywtonRandomVsRandom', ['$timeout','$window','NywtonChessGameService', function($timeout, $window, ChessGameService) {
     var directive = {
       restrict: 'A',
       priority: 1,
       require: 'nywtonChessgame',
       controller: ['$scope', function randomVsRandom($scope) {
+        var _MIN_INTERVAL = 100;
+        var interval = 1000;
         var timeoutPromise = null;
         
-        this.delayedInvocation = function delayedInvocationF(game, board) {
-          timeoutPromise = $timeout(function() {
-            // exit if the game is over
-            if (game.game_over() !== true && game.in_draw() !== true) {
-              ChessGameService.makeRandomMove(game, board);
-              delayedInvocationF(game, board);
-            }
-          }, 500);
+        this.setInterval = function getIntervalF(t) {
+          interval = t >= _MIN_INTERVAL ? t : interval;
         };
-  
+        
+        this.makeRandomMoveDelayedInvocation = function makeRandomMoveDelayedInvocationF(game, board) {
+          $timeout.cancel(timeoutPromise);
+          timeoutPromise = $timeout(function makeRandomMoveF() {
+            // exit if the game is over
+            if (game.game_over() !== true) {
+              ChessGameService.makeRandomMove(game, board);
+              makeRandomMoveDelayedInvocationF(game, board);
+            }
+          }, interval);
+        };
+        
         $scope.$on('$destroy', function onDestroyF() {
           $timeout.cancel(timeoutPromise);
         });
       }],
       link: function link($scope, $element, $attrs, $ctrl) {
         var thisCtrl = $element.controller('nywtonRandomVsRandom');
-        $timeout(function() {
-          var game = $ctrl.game();
-          var board = $ctrl.board();
-          
-          thisCtrl.delayedInvocation(game, board);
-        }, 0);
+        
+        $attrs.$observe('interval', function(val) {
+          if(val) {
+            var parsedValue = $window.parseInt(val);
+            if(parsedValue === parsedValue && angular.isNumber(parsedValue)) {
+              thisCtrl.setInterval(parsedValue);
+            }
+          }
+        });
+        
+        $scope.$watch(function() {
+          return $ctrl.game() && $ctrl.game().game_over();
+        }, function(newValue, oldValue) {
+          // first run or restarted
+          if((oldValue === false && newValue === false) ||
+              (newValue === false && oldValue === true)) {
+            $timeout(function() {
+              var game = $ctrl.game();
+              var board = $ctrl.board();
+              thisCtrl.makeRandomMoveDelayedInvocation(game, board);
+            }, 0);
+          }
+        });
       },
     };
     
