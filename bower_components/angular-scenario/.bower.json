@@ -1,0 +1,18 @@
+{
+  "name": "angular-scenario",
+  "version": "1.2.14-build.2317+sha.348a771",
+  "main": "./angular-scenario.js",
+  "dependencies": {
+    "angular": "1.2.14-build.2317+sha.348a771"
+  },
+  "homepage": "https://github.com/angular/bower-angular-scenario",
+  "_release": "1.2.14-build.2317+sha.348a771",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.14-build.2317+sha.348a771",
+    "commit": "063f7794e776271d4ee929ddb158875e86c807fa"
+  },
+  "_source": "git://github.com/angular/bower-angular-scenario.git",
+  "_target": "~1.2.13",
+  "_originalSource": "angular-scenario"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "angular-chessboard",
+  "version": "0.0.4",
+  "dependencies": {
+    "angular": "~1.2.13",
+    "chessboard.js": "~0.3.2",
+    "jquery": "~2.1.0"
+  },
+  "main": [
+    "angular-chessboard.js"
+  ],
+  "homepage": "https://github.com/theborakompanioni/bower-angular-chessboard",
+  "_release": "0.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.4",
+    "commit": "2fc1b60b7c4de1c9434541b1ecec4ddc4b146420"
+  },
+  "_source": "git://github.com/theborakompanioni/bower-angular-chessboard.git",
+  "_target": "~0.0.4",
+  "_originalSource": "angular-chessboard"
+}

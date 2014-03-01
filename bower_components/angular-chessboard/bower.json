@@ -1,0 +1,10 @@
+{
+  "name": "angular-chessboard",
+  "version": "0.0.4",
+  "dependencies": {
+    "angular": "~1.2.13",
+    "chessboard.js": "~0.3.2",
+    "jquery": "~2.1.0"
+  },
+  "main": ["angular-chessboard.js"]
+}

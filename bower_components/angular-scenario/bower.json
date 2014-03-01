@@ -1,0 +1,8 @@
+{
+  "name": "angular-scenario",
+  "version": "1.2.14-build.2317+sha.348a771",
+  "main": "./angular-scenario.js",
+  "dependencies": {
+    "angular": "1.2.14-build.2317+sha.348a771"
+  }
+}
