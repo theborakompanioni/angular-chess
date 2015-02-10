@@ -1,3 +1,9 @@
+.DS_Store
+*.log
+*.iml
+.idea
+
 .tmp
 .sass-cache
 .project
+
