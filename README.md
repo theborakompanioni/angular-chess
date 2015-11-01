@@ -6,7 +6,10 @@
 angular-chess
 ==================================================
 
-Chess Directive for AngularJS based on [angular-chessboard](https://github.com/theborakompanioni/angular-chessboard).
+Chess Directive for AngularJS based on [angular-chessboard](https://github.com/theborakompanioni/angular-chessboard)
+
+This is just a proof-of-concept to validate moves on a chess board managed by [angular-chessboard](https://github.com/theborakompanioni/angular-chessboard).
+This example is using [chess.js](https://github.com/jhlywa/chess.js) for move validation.
 
 Examples
 --------------------------------------
@@ -14,5 +17,4 @@ Examples
 
 License
 --------------------------------------
-
-angular-chess is released under the [MIT License](https://github.com/theborakompanioni/angular-chess/blob/master/LICENSE).
+The project is licensed under the [MIT License](https://github.com/theborakompanioni/angular-chess/blob/master/LICENSE).
