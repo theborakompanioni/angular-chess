@@ -1,6 +1,18 @@
 {
   "name": "angular-chess",
   "version": "0.0.3",
+  "license": "MIT",
+  "description": "Chess Directive for AngularJS",
+  "main": ["dist/angular-chess.min.js"],
+  "keywords": [
+    "chess",
+    "board",
+    "chessboard",
+    "angular"
+  ],
+  "authors": [
+    "theborakompanioni"
+  ],
   "dependencies": {
     "angular": "~1.2.29",
     "angular-chessboard": "~0.0.4",
