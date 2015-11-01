@@ -2,12 +2,12 @@
   "name": "angular-chess",
   "version": "0.0.3",
   "dependencies": {
-    "angular": "~1.2.13",
+    "angular": "~1.2.29",
     "angular-chessboard": "~0.0.4",
     "chess.js": "*"
   },
   "devDependencies": {
-    "angular-mocks": "~1.2.13",
-    "angular-scenario": "~1.2.13"
+    "angular-mocks": "~1.2.29",
+    "angular-scenario": "~1.2.29"
   }
 }
