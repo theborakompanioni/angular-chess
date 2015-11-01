@@ -1,13 +1,10 @@
 .DS_Store
 *.log
 *.iml
-.idea
+.idea/
 
 node_modules
 bower_components
-dist
-
 .tmp
 .sass-cache
 .project
-

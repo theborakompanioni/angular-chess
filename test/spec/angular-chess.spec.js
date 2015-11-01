@@ -1,3 +1,4 @@
+/*global describe,it,expect,beforeEach,inject*/
 'use strict';
 
 describe('angular-chess', function () {
@@ -17,6 +18,7 @@ describe('angular-chess', function () {
     
     $scope.$digest();
 
+    expect(element).toBeDefined();
     expect($scope.board).toBeDefined();
     expect($scope.game).toBeDefined();
   });
