@@ -13,6 +13,7 @@ This example is using [chess.js](https://github.com/jhlywa/chess.js) for move va
 
 Examples
 --------------------------------------
+- Multichess (Demo Application) - <http://multichess.github.io>
 - Examples - <http://theborakompanioni.github.io/angular-chess/#/examples>
 
 License
