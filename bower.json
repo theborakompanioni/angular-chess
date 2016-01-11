@@ -3,7 +3,9 @@
   "version": "0.0.3",
   "license": "MIT",
   "description": "Chess Directive for AngularJS",
-  "main": ["dist/angular-chess.min.js"],
+  "main": [
+    "dist/angular-chess.min.js"
+  ],
   "keywords": [
     "chess",
     "board",
@@ -14,12 +16,15 @@
     "theborakompanioni"
   ],
   "dependencies": {
-    "angular": "~1.2.29",
+    "angular": "^1.2.29",
     "angular-chessboard": "~0.0.4",
     "chess.js": "*"
   },
   "devDependencies": {
-    "angular-mocks": "~1.2.29",
-    "angular-scenario": "~1.2.29"
+    "angular-mocks": "^1.2.29",
+    "angular-scenario": "^1.2.29"
+  },
+  "resolutions": {
+    "angular": "1.4.8"
   }
 }
