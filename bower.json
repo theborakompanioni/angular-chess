@@ -1,6 +1,6 @@
 {
   "name": "angular-chess",
-  "version": "0.0.3",
+  "version": "0.0.4-SNAPSHOT",
   "license": "MIT",
   "description": "Chess Directive for AngularJS",
   "main": [

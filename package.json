@@ -1,6 +1,6 @@
 {
   "name": "angular-chess",
-  "version": "0.0.3",
+  "version": "0.0.4-SNAPSHOT",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
