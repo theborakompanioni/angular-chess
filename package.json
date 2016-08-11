@@ -20,7 +20,7 @@
     "grunt-rev": "~0.1.0",
     "jasmine-core": "^2.4.1",
     "jshint-stylish": "^2.1.0",
-    "karma": "^0.13.19",
+    "karma": "^1.2.0",
     "karma-chrome-launcher": "^0.2.2",
     "karma-coffee-preprocessor": "^0.3.0",
     "karma-firefox-launcher": "^0.1.7",
